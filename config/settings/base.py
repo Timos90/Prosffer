@@ -16,15 +16,17 @@ DEFAULT_APPS = [
 ]
 
 CUSTOM_APPS = [
-    # USER DEFINED APPS
-    # "apps.name1",    # <-- your app name goes here
-    # "apps.name2",    # <-- your app name goes here
-    # "apps.name3"     # <-- your app name goes here
+    "apps.user",
+    "apps.core",
+    "apps.product",
+    "apps.wishlist",
+    "apps.main",
 ]
 
 
+
 THIRD_PARTY_APPS = [
-    # USER DEFINED APPS
+    'django_extensions',
 ]
 
 
@@ -91,7 +93,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-# STATICFILES_DIRS = [BASE_DIR / 'static']
+#STATICFILES_DIRS = [BASE_DIR / 'apps/user/static']
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
