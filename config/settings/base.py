@@ -18,6 +18,7 @@ DEFAULT_APPS = [
 CUSTOM_APPS = [
     "apps.user",
     "apps.core",
+    "apps.product",
 ]
 
 
