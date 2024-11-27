@@ -1,11 +1,7 @@
 from django.http import JsonResponse
 from django.views.generic import ListView
 from django.db.models import Q
-
 from .models import Product
-
-
-# Create your views here.
 
 
 class ProductListView(ListView):

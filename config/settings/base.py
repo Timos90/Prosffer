@@ -20,6 +20,7 @@ CUSTOM_APPS = [
     "apps.core",
     "apps.product",
     "apps.wishlist",
+    "apps.main",
 ]
 
 
