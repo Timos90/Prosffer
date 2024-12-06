@@ -1,0 +1,33 @@
+name: Django CI
+
+on:
+  push:
+    branches:
+      - main  # Run tests on every push to the main branch
+  pull_request:
+    branches:
+      - main  # Run tests for pull requests targeting the main branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - uses: actions/checkout@v3
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      # Step 3: Install project dependencies
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          make dev-install
+
+      # Step 4: Run Django tests
+      - name: Run tests
+        run: python3 manage.py test apps/user/tests --settings=config.settings.dev
