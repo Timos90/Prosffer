@@ -30,4 +30,6 @@ jobs:
 
       # Step 4: Run Django tests
       - name: Run tests
+        env:
+            SECRET_KEY: ${{ env.SECRET_KEY }}
         run: python3 manage.py test apps/user/tests --settings=config.settings.dev
