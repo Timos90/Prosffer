@@ -34,7 +34,7 @@ jobs:
             SECRET_KEY: ${{ env.SECRET_KEY }}
             DB_NAME: ${{ env.DB_NAME }}
             DB_USER: ${{ env.DB_USER }}
-            DB_PASSWORD: ${{ env.DB_PWD }}
+            DB_PASSWORD: ${{ env.DB_PASSWORD }}
             DB_HOST: ${{ env.DB_HOST }}
             DB_PORT: ${{ env.DB_PORT }}
         run: python3 manage.py test apps/user/tests --settings=config.settings.dev
