@@ -47,4 +47,6 @@ jobs:
             DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
             DB_HOST: localhost
             DB_PORT: 5432
-        run: python3 manage.py test apps/user/tests --settings=config.settings.dev
+        run: |
+            python3 manage.py test apps/user/tests --settings=config.settings.dev
+            python3 manage.py test apps/product/tests --settings=config.settings.dev

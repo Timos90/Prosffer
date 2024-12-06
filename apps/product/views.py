@@ -65,7 +65,7 @@ def product_list_ajax(request):
             'price': product.price,
             'store': product.store,
             'description': product.description,
-            'image': product.image.url,
+            'image': product.image,
             'link': product.link,
         }
         for product in products

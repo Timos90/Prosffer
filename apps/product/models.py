@@ -15,3 +15,6 @@ class Product(models.Model):
 
     def __str__(self) -> str:
         return f"Store: {self.store}, Product: {self.name}, Price: {self.price}{self.currency}"
+
+    class Meta:
+        ordering = ['price']
